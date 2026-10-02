@@ -1,0 +1,376 @@
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.portfolio {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #f7d5e1;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  scroll-margin-top: 90px;
+}
+
+/* =========================================================
+   MAIN BACKGROUND
+   نفس الألوان اللي اخترتيهم
+========================================================= */
+
+.page-gradient {
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 255, 255, 0.55),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(255, 255, 255, 0.25),
+      transparent 32%
+    ),
+    linear-gradient(
+      105deg,
+      #f7d5e1 0%,
+      #e7ccd7 45%,
+      #aaa6a8 100%
+    );
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   WAVE / SOFT DECORATION
+========================================================= */
+
+.page-gradient::before {
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  right: -280px;
+  top: 5%;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  box-shadow:
+    0 0 0 35px rgba(255, 255, 255, 0.08),
+    0 0 0 70px rgba(255, 255, 255, 0.05),
+    0 0 0 110px rgba(255, 255, 255, 0.035);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   CONTENT ABOVE DECORATION
+========================================================= */
+
+.page-gradient > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.section-container {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION SPACING
+========================================================= */
+
+section {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
+
+.section-title {
+  margin-bottom: 55px;
+}
+
+.section-title span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #a94b6e;
+}
+
+.section-title h2 {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+
+  color: #24151c;
+}
+
+.section-title p {
+  max-width: 600px;
+
+  margin-top: 20px;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  color: #55434b;
+}
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.card {
+  background: rgba(255, 255, 255, 0.52);
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 45px rgba(73, 38, 51, 0.08);
+
+  backdrop-filter: blur(10px);
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* =========================================================
+   FLOATING MAIL
+========================================================= */
+
+.mail-floating {
+  position: absolute;
+
+  right: 35px;
+  bottom: 35px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  border: 1.5px solid #ed6794;
+
+  color: #c94f79;
+
+  z-index: 20;
+
+  box-shadow:
+    0 10px 30px rgba(102, 50, 68, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mail-floating:hover {
+  transform: translateY(-5px) scale(1.08);
+
+  box-shadow:
+    0 15px 35px rgba(102, 50, 68, 0.22);
+}
+
+/* =========================================================
+   BUTTON STYLE
+========================================================= */
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 25px;
+
+  border-radius: 999px;
+
+  background: #24151c;
+  color: #ffffff;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+
+  background: #a94b6e;
+
+  box-shadow:
+    0 10px 25px rgba(169, 75, 110, 0.25);
+}
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 24px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(36, 21, 28, 0.25);
+
+  color: #24151c;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.secondary-button:hover {
+  background: rgba(255, 255, 255, 0.5);
+
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.tag {
+  display: inline-flex;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  border: 1px solid rgba(169, 75, 110, 0.15);
+
+  color: #75465a;
+
+  font-family:
+    "Inter",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  section {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+
+  .section-container {
+    width: 90%;
+  }
+
+  .section-title h2 {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+  }
+}
+
+@media (max-width: 600px) {
+
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    scroll-margin-top: 75px;
+  }
+
+  .section-title {
+    margin-bottom: 35px;
+  }
+
+  .section-title h2 {
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+  }
+
+  .section-title p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .mail-floating {
+    right: 15px;
+    bottom: 15px;
+
+    width: 40px;
+    height: 40px;
+  }
+}
+

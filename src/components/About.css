@@ -1,0 +1,247 @@
+/* =================================
+   ABOUT
+================================= */
+
+.about {
+  position: relative;
+
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    115deg,
+    #f8d5e1 0%,
+    #efd0dc 38%,
+    #c7b8be 72%,
+    #9d9a9c 100%
+  );
+
+  color: #3b003d;
+}
+
+
+/* =================================
+   CONTAINER
+================================= */
+
+.about-container {
+  width: min(1120px, 90%);
+  min-height: 620px;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  align-items: center;
+
+  column-gap: 75px;
+
+  margin: auto;
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.about-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  max-width: 650px;
+}
+
+
+/* =================================
+   "JE SUIS"
+================================= */
+
+.about-intro {
+  margin: 0 0 8px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 1.45rem;
+
+  font-weight: 600;
+
+  color: #5e315c;
+}
+
+
+/* =================================
+   TITLE
+================================= */
+
+.about-content h2 {
+  margin: 0 0 28px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  letter-spacing: -1.5px;
+
+  color: #4b004b;
+}
+
+
+.about-content h2 span {
+  color: #d94f87;
+}
+
+
+/* =================================
+   PARAGRAPHS
+================================= */
+
+.about-content p:not(.about-intro) {
+  margin: 0 0 20px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(1.12rem, 1.55vw, 1.35rem);
+
+  line-height: 1.65;
+
+  font-weight: 500;
+
+  color: #260c25;
+}
+
+
+/* dernier paragraphe */
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =================================
+   PHOTO
+================================= */
+
+.about-photo-wrapper {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.about-photo {
+  width: clamp(270px, 31vw, 390px);
+
+  height: clamp(270px, 31vw, 390px);
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 5px solid rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 18px 40px rgba(61, 0, 60, 0.22);
+
+  display: block;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+  .about {
+    min-height: auto;
+
+    padding: 100px 0;
+  }
+
+  .about-container {
+    width: 88%;
+
+    grid-template-columns: 1fr;
+
+    row-gap: 55px;
+
+    text-align: center;
+  }
+
+  .about-content {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    align-items: center;
+  }
+
+  .about-photo-wrapper {
+    order: 2;
+  }
+
+  .about-photo {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 500px) {
+
+  .about {
+    padding: 80px 0;
+  }
+
+  .about-container {
+    width: 88%;
+
+    row-gap: 40px;
+  }
+
+  .about-intro {
+    font-size: 1.2rem;
+  }
+
+  .about-content h2 {
+    font-size: 2.7rem;
+
+    letter-spacing: -0.8px;
+
+    margin-bottom: 20px;
+  }
+
+  .about-content p:not(.about-intro) {
+    font-size: 1.05rem;
+
+    line-height: 1.6;
+
+    margin-bottom: 17px;
+  }
+
+  .about-photo {
+    width: 210px;
+    height: 210px;
+
+    border-width: 4px;
+  }
+}

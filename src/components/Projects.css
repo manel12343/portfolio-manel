@@ -1,0 +1,209 @@
+.projects {
+  min-height: 550px;
+
+  position: relative;
+
+  padding: 55px 4% 70px;
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: auto;
+}
+
+.projects-title-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+
+  gap: 30px;
+}
+
+.projects-title-row h2 {
+  color: #72146f;
+
+  font-size: 16px;
+}
+
+.projects-title-row p {
+  max-width: 420px;
+
+  font-size: 8px;
+
+  line-height: 1.4;
+}
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.project-card {
+  background: #efedee;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 5px 15px rgba(71, 43, 58, 0.15);
+
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-preview {
+  width: 100%;
+  height: 120px;
+
+  padding: 5px;
+
+  background: #f8f8f8;
+
+  overflow: hidden;
+}
+
+.project-preview img,
+.project-preview video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 6px;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ddd1d8,
+      #b6aab0
+    );
+
+  color: #6b1268;
+}
+
+.video-placeholder span {
+  font-size: 8px;
+}
+
+.project-body {
+  padding: 10px;
+}
+
+.project-body h3 {
+  color: #b02a7a;
+
+  font-size: 11px;
+
+  margin-bottom: 7px;
+}
+
+.project-body p {
+  font-size: 7px;
+
+  line-height: 1.45;
+
+  min-height: 55px;
+
+  margin-bottom: 8px;
+}
+
+.project-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 3px;
+
+  margin-bottom: 8px;
+}
+
+.project-tags span {
+  padding: 3px 5px;
+
+  border-radius: 10px;
+
+  background: #24106e;
+
+  color: white;
+
+  font-size: 6px;
+
+  font-weight: 600;
+}
+
+.github-project {
+  display: flex;
+
+  align-items: center;
+
+  gap: 3px;
+
+  color: #651264;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .projects {
+    padding: 60px 20px 80px;
+  }
+
+  .projects-title-row {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-preview {
+    height: 190px;
+  }
+
+  .project-body p {
+    font-size: 9px;
+  }
+
+  .project-tags span {
+    font-size: 7px;
+  }
+}
