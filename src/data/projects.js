@@ -1,9 +1,7 @@
+
 import gestionCommandes from "../assets/Gestion_de_Commandes/accueil.png";
 import recettes from "../assets/Recettes_de_cuisine/accuiel.png";
 import tndConverter from "../assets/TNDConverter/accuiel.jpg";
-
-import rendezVousVideo from "../assets/gestion_des_rendez-vous_médicaux/interface_utilisateur.mp4";
-import rendezVousAdminVideo from "../assets/gestion_des_rendez-vous_médicaux/interface_administrateur.mp4";
 
 export const projects = [
   {
@@ -36,13 +34,11 @@ export const projects = [
     id: 2,
     title: "Plateforme de gestion des rendez-vous médicaux",
 
-    type: "video",
+    type: "placeholder",
 
-    src: rendezVousVideo,
+    src: null,
 
     image: null,
-
-    extraVideo: rendezVousAdminVideo,
 
     description:
       "Plateforme permettant aux patients de consulter les disponibilités et de gérer leurs rendez-vous, tout en offrant aux médecins un espace dédié au suivi des consultations.",
